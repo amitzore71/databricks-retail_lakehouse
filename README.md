@@ -8,7 +8,7 @@ The stack is Databricks with PySpark and Spark SQL, Unity Catalog for governance
 
 ## The Data
 
-We're working with the public [Kaggle Olist Ecommerce dataset](https://www.kaggle.com/). Drop these six CSV files into `/Volumes/main/retail_p1/raw/olist/` before running anything:
+We're working with the public [Kaggle Olist Ecommerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). Drop these six CSV files into `/Volumes/main/retail_p1/raw/olist/` before running anything:
 
 - `olist_orders_dataset.csv`
 - `olist_order_items_dataset.csv`
@@ -107,5 +107,3 @@ SELECT COUNT(*) AS checks_logged
 FROM main.retail_p1.dq_results
 WHERE run_ts >= current_timestamp() - INTERVAL 1 DAY;
 ```
-
-**Dashboard query latency** — run `sql/dashboard_queries.sql` in Databricks SQL and confirm all queries complete in under 10 seconds on sample data.
